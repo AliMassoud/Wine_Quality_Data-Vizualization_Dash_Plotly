@@ -53,34 +53,50 @@ app.layout = html.Div(children=[
     html.H3(children='Ali Massoud'),
     html.H3(children='Qinghua Ye'),
 
+    html.H4(children="Wine quality distribute on the amount of sugar remaining after fermentation stops"),
     html.Div(children='''
-        Based on residual sugar, pH, sulphates, alcohol, chlorides
-    '''),
+        For most of wine, the amount of sugar are betwwen 1.8 ~ 8.1(greater than 45 grams/liter are considered sweet)
+        '''),
     dcc.Graph(
         id='graph1',
         figure=fig1
-    )
-    ,
+    ),
+    html.H4(children="Correlation between wine quality and pH and residual sugar"),
+    html.Div(children='''
+        high quality, less sugar, pH higher
+        '''),
     dcc.Graph(
         id='graph2',
         figure=fig2
-    )
-    ,
+    ),
+    html.H4(children="Correlation between wine quality and chlorides"),
+    html.Div(children='''
+        less chlorides, higher quality
+        '''),
     dcc.Graph(
         id='graph3',
         figure=fig3
-    )
-    ,
+    ),
+    html.H4(children="Correlation between pH and residual sugar based on wine quality"),
+    html.Div(children='''
+        high quality wine distribute on less suger, PH scale is on 3-4
+        '''),
     dcc.Graph(
         id='graph4',
         figure=fig4
-    )
-    ,
+    ),
+    html.H4(children="Correlation between wine quality and alcohol"),
+    html.Div(children='''
+        For most of wine,alcohol is between 8-14
+        '''),
     dcc.Graph(
         id='graph5',
         figure=fig5
-    )
-    ,
+    ),
+    html.H4(children="The distribution of pH and sulphates and alcohol"),
+    html.Div(children='''
+         Most of wine PH 3-3.4 sulphates 0.4-0.6 alcohol 9-9.5
+        '''),
     dcc.Graph(
         id='graph6',
         figure=fig6
@@ -111,10 +127,6 @@ app.layout = html.Div(children=[
     id='graph9',
     figure=fig9
     ),
-    html.H4(children="Bar plot that shows the relation between volitile acide, and quality with a code color pattern for the type of wine."),
-    html.Div(children='''
-        it shows that the wine that has quality between [5,6,7] has ore volitile acide compared to the other wine qualities.
-        '''),
     dcc.Graph(
     id='graph10',
     figure=fig10
